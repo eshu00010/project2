@@ -1,0 +1,56 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
+    "data": {"url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/totalpopyears.csv"},
+    "width": "container",
+    "transform": [{"filter": "datum.Geography!=='South Wharf'"}],
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal", "title": "Year"},
+      "y": {"field": "Value", "type": "quantitative", "title": "Population"},
+      "color": {
+        "condition": {
+          "param": "hover",
+          "field":"Geography",
+          "type":"nominal",
+          "legend": null
+        },
+        "value": "grey"
+      },
+      "opacity": {
+        "condition": {
+          "param": "hover",
+          "value": 1
+        },
+        "value": 0.2
+      }
+    },
+    "layer": [{
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [{
+        "name": "hover",
+        "value": [{"symbol": "Melbourne"}],
+        "select": {
+          "type": "point",
+          "fields": ["symbol"],
+          "on": "mouseover"
+        }
+      }],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    }, 
+    {
+      "mark": "line"
+    }, 
+    {
+      "encoding": {
+        "x": {"aggregate": "max", "field": "Year"},
+        "y": {"aggregate": {"argmax": "Year"}, "field": "Value"}
+      },
+      "layer": [{
+        "mark": {"type": "circle"}
+      }, {
+        "mark": {"type": "text", "align": "left", "dx": 4},
+        "encoding": {"text": {"field":"Geography", "type": "nominal"}}
+      }]
+    }],
+    "config": {"view": {"stroke": null}}
+  }

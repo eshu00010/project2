@@ -1,0 +1,89 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Forecasted population in the City of Melbourne for 2020 - 2040",
+    "frame": "group"
+    },
+    "width": 500,
+    "height": 400,
+    "params": [
+        {
+          "name": "Year_selection",
+          "value": 2020,
+          "bind": {
+            "input": "range",
+            "min": 2020,
+            "max": 2040,
+            "step": 1,
+            "name": "Year:  "
+          }
+        }
+    ],
+    "projection": {
+      "type": "equirectangular"
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/cityofmelbmap.json",
+          "format": {"type": "topojson", "feature": "vic_localities"}
+        },
+        "transform": [
+          {
+            "calculate": "datum.properties.LOC_NAME + ' is not in the City of Melbourne'",
+            "as": "note"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "fill": "#ddd",
+          "stroke": "white",
+          "strokeWidth": 1
+        },
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/totalpopyears.csv"
+        },
+        "transform": [
+          {
+            "lookup": "Geography",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/cityofmelbmap.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "vic_localities"
+                }
+              },
+              "key": "properties.LOC_NAME"
+            },
+            "as": "geo"
+          },
+          {"filter": "datum.Year == Year_selection"}
+        ],
+        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+        "encoding": {
+          "shape": {"field": "geo", "type": "geojson"},
+          "color": {
+            "field": "Value",
+            "type": "quantitative",
+            "scale": {"domain": [0, 5000, 10000, 15000, 20000, 25000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000], "scheme": "reds"},
+            "legend": {"format": ".2s"}
+          },
+          "tooltip": [
+            {"field": "Geography", "type": "nominal", "title": "Suburb"},
+            {
+              "field": "Value",
+              "type": "quantitative",
+              "title": "Population",
+              "format": ","
+            },
+            {"field": "Year", "type": "quantitative", "title": "Year"}
+          ]
+        }
+      }
+    ],
+    "config": {"style": {"cell": {"stroke": "white"}}}
+  }

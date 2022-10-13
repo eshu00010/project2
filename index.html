@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <img src="https://www.booksandpublishing.com.au/wp-content/uploads/2017/09/com-secondary-a-solid-400x111.jpg">
+      </div>
+      <div class="pure-u-1-2">
+        <h1>Demographics</h1>
+        <p>Explore demographic data from the 2021 Census on the City of Melbourne Council. Emphasis is placed on population, rent, income and car ownership.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+          <p>Include map of boundaries</p>
+        </div>
+        <div class="pure-u-1-2">
+          <p>The City of Melbourne Council is composed of the following suburbs: 
+              <ul>
+                  <li>Carlton</li>
+                  <li>Docklands</li>
+                  <li>East Melbourne</li>
+                  <li>Kensington</li>
+                  <li>Melbourne</li>
+                  <li>North Melbourne</li>
+                  <li>Parkville</li>
+                  <li>Port Melbourne</li>
+                  <li>South Yarra</li>
+                  <li>Southbank</li>
+                  <li>West Melbourne</li>
+                  <li>South Wharf</li>
+              </ul> 
+          </p>
+          <p>South Wharf is excluded from the following data visualisations due to low population numbers.</p>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Forecasted population</h2>
+          <p>SGS Economics produced forecasts for the City of Melbourne for each year from 2020 to 2040. This included population forecasts broken down by age group and gender.</p>
+          <p>The suburb of Melbourne has the highest population for all time periods, followed by Southbank. This could be due to these suburbs' higher density residential buildings, relative to the other suburbs in the City of Melbourne.</p>
+          <p>For more information on SGS Economics' forecasts, visit <a href="https://data.melbourne.vic.gov.au/browse?q=SGS&sortBy=relevance">City of Melbourne Open Data</a>. </p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis1" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+    
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-left">
+            <h2>Median characteristics</h2>
+            <p>Here is a visual representation of selected characteristics of each suburb of the City of Melbourne.</p>
+          </div>
+        </div>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+        <div class="description description-left">
+            <p>Median age</p>
+        </div>
+        <div id="vis6" class="vis-container"></div>
+        <div class="description description-left">
+            <p>East Melbourne and Port Melbourne have the highest median age of 42 years of age. </p>
+            <p>Parkville and Carlton have the lowest median ages of 26 and 27, respectively.</p>
+        </div>
+        </div>
+        <div class="pure-u-1-3">
+            <div class="description description-left">
+            <p>Median weekly rent ($)</p>
+            </div>
+            <div id="vis4" class="vis-container"></div>
+            <div class="description description-left">
+                <p>Port Melbourne has the highest median rent of $540 per week.</p>
+                <p>Carlton has the lowest median rent of $365 per week.</p>
+            </div>
+        </div>
+        <div class="pure-u-1-3">
+            <div class="description description-left">
+            <p>Median personal weekly income ($)</p>
+            </div>
+            <div id="vis5" class="vis-container"></div>
+            <div class="description description-left">
+                <p>East Melbourne has the highest median personal income of $1,532 per week.</p>
+                <p>Parkville has the lowest median personal income of $586 per week.</p>
+            </div>
+        </div>
+    <!-- end pure grid group -->
+
+
+   <!-- pure grid group -->
+   <div class="pure-g">
+    <div class="pure-u-1-3">
+      <div class="description description-left">
+        <h2>Car ownership</h2>
+        <p>{Insert text}</p>
+      </div>
+    </div>
+    <div class="pure-u-2-3">
+        <div id="vis7" class="vis-container"></div>
+    </div>
+    <!-- end pure grid group -->
+    
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+            <h2>Population breakdown</h2>
+            <p>{Insert text}</p>
+          </div>
+          </div>
+        <div class="pure-u-2-3">
+            <div id="vis8" class="vis-container"></div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div id="vis9" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis10" class="vis-container"></div>
+        </div>
+    </div>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis11" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis12" class="vis-container"></div>
+        </div>
+    </div>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis13" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis14" class="vis-container"></div>
+            </div>
+            </div>           
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis15" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis16" class="vis-container"></div>
+            </div>
+            </div>  
+   
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis17" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis18" class="vis-container"></div>
+            </div>
+            </div> 
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by Katie Shumilova for FIT3179 Project 2.</p>
+      </div>
+    </div>
+
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var specVis1 = "./totalpopoveryears.vg.json";
+    var specVis2 = "./popforecasts.vg.json";
+    var specVis3 = "./popforecasts.vg.json";
+    var specVis4 = "./medianrent.vg.json";
+    var specVis5 = "./medianpersonalincome.vg.json";
+    var specVis6 = "./medianage.vg.json";
+    var specVis7 = "./carownership.vg.json";
+    var specVis8 = "./populationpyramid_citymelb.vg.json";
+    var specVis9 = "./populationpyramid_carlton.vg.json";
+    var specVis10 = "./populationpyramid_docklands.vg.json";
+    var specVis11 = "./populationpyramid_eastmelb.vg.json";
+    var specVis12 = "./populationpyramid_kensington.vg.json";
+    var specVis13 = "./populationpyramid_melbourne.vg.json";
+    var specVis14 = "./populationpyramid_northmelb.vg.json";
+    var specVis15 = "./populationpyramid_parkville.vg.json";
+    var specVis16 = "./populationpyramid_portmelb.vg.json";
+    var specVis17 = "./populationpyramid_southbank.vg.json";
+    var specVis18 = "./populationpyramid_southyarra.vg.json";
+    var specVis19 = "./populationpyramid_westmelb.vg.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis7', specVis7, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis8', specVis8, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis9', specVis9, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis10', specVis10, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis11', specVis11, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis12', specVis12, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis13', specVis13, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis14', specVis14, { "actions": false }).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "projection": {
+      "type": "equirectangular"
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/cityofmelbmap.json",
+          "format": {"type": "topojson", "feature": "vic_localities"}
+        },
+        "transform": [
+          {
+            "calculate": "datum.properties.LOC_NAME + ' is not in the City of Melbourne'",
+            "as": "note"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "fill": "#ddd",
+          "stroke": "white",
+          "strokeWidth": 1
+        },
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/medianchars.csv"
+        },
+        "transform": [
+          {
+            "lookup": "Geography",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/cityofmelbmap.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "vic_localities"
+                }
+              },
+              "key": "properties.LOC_NAME"
+            },
+            "as": "geo"
+          }
+        ],
+        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+        "encoding": {
+          "shape": {"field": "geo", "type": "geojson"},
+          "color": {
+            "field": "Median weekly rent ($)",
+            "type": "quantitative",
+            "scale": {"scheme": "reds", "domainMax": 550},
+            "legend": {"format": ".2s", "orient": "bottom"}
+          },
+          "tooltip": [
+            {"field": "Geography", "type": "nominal", "title": "Suburb"},
+            {
+              "field": "Median weekly rent ($)",
+              "type": "quantitative",
+              "format": ","
+            }
+          ]
+        }
+      }
+    ],
+    "config": {"style": {"cell": {"stroke": "white"}}}
+  }

@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "Number of vehicles per dwelling in each suburb in 2021"},
+    "width": "container",
+    "data": {"url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/carslong.csv"},
+    "mark": "bar",
+    "encoding": {
+      "x": {"aggregate": "sum", "field": "Value", "title": "Share of number of vehicles per dwelling", "stack": "normalize"},
+      "y": {"field": "Geography", "title": "Suburb"},
+      "color": {"field": "Vehicles per dwelling"},
+      "tooltip": [
+        {"field": "Geography", "type": "ordinal", "title": "Suburb"},
+        {"field": "Vehicles per dwelling", "type": "nominal"},
+        {"field": "Share", "type": "nominal", "title": "Share of total"},
+        {"field": "Value", "type": "quantitative", "title": "Number"}
+      ]
+    }
+  }
