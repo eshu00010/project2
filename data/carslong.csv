@@ -1,56 +1,56 @@
 ﻿Geography,Suburb,Vehicles per dwelling,Value,Share
-Carlton,CARLTON,0 motor vehicles,3294,0.485984066
-Carlton,CARLTON,1 motor vehicle,2714,0.400413101
-Carlton,CARLTON,2 motor vehicles,620,0.091472411
-Carlton,CARLTON,3 motor vehicles,103,0.015196223
-Carlton,CARLTON,4+ motor vehicles,46,0.006786663
-Docklands,DOCKLANDS,0 motor vehicles,3044,0.408480945
-Docklands,DOCKLANDS,1 motor vehicle,3514,0.471551261
-Docklands,DOCKLANDS,2 motor vehicles,765,0.102657005
-Docklands,DOCKLANDS,3 motor vehicles,96,0.012882448
-Docklands,DOCKLANDS,4+ motor vehicles,36,0.004830918
-East Melbourne,EAST MELBOURNE,0 motor vehicles,452,0.19047619
-East Melbourne,EAST MELBOURNE,1 motor vehicle,1263,0.532237674
-East Melbourne,EAST MELBOURNE,2 motor vehicles,539,0.227138643
-East Melbourne,EAST MELBOURNE,3 motor vehicles,71,0.029919933
-East Melbourne,EAST MELBOURNE,4+ motor vehicles,44,0.01854193
-Kensington,KENSINGTON,0 motor vehicles,791,0.169161677
-Kensington,KENSINGTON,1 motor vehicle,2549,0.545124038
-Kensington,KENSINGTON,2 motor vehicles,1111,0.237596236
-Kensington,KENSINGTON,3 motor vehicles,176,0.037639008
-Kensington,KENSINGTON,4+ motor vehicles,46,0.009837468
-Melbourne,MELBOURNE,0 motor vehicles,16453,0.610704874
-Melbourne,MELBOURNE,1 motor vehicle,8909,0.330685572
-Melbourne,MELBOURNE,2 motor vehicles,1360,0.05048068
-Melbourne,MELBOURNE,3 motor vehicles,147,0.005456368
-Melbourne,MELBOURNE,4+ motor vehicles,77,0.002858097
-North Melbourne,NORTH MELBOURNE,0 motor vehicles,2095,0.327702174
-North Melbourne,NORTH MELBOURNE,1 motor vehicle,3249,0.508212107
-North Melbourne,NORTH MELBOURNE,2 motor vehicles,879,0.137494134
-North Melbourne,NORTH MELBOURNE,3 motor vehicles,126,0.019709057
-North Melbourne,NORTH MELBOURNE,4+ motor vehicles,43,0.006726107
-Parkville,PARKVILLE,0 motor vehicles,381,0.179125529
-Parkville,PARKVILLE,1 motor vehicle,1203,0.565585331
-Parkville,PARKVILLE,2 motor vehicles,431,0.202632816
-Parkville,PARKVILLE,3 motor vehicles,80,0.03761166
-Parkville,PARKVILLE,4+ motor vehicles,32,0.015044664
-Port Melbourne,PORT MELBOURNE,0 motor vehicles,930,0.120403936
-Port Melbourne,PORT MELBOURNE,1 motor vehicle,4152,0.537545313
-Port Melbourne,PORT MELBOURNE,2 motor vehicles,2177,0.281848783
-Port Melbourne,PORT MELBOURNE,3 motor vehicles,353,0.045701709
-Port Melbourne,PORT MELBOURNE,4+ motor vehicles,111,0.014370792
-South Yarra,SOUTH YARRA,0 motor vehicles,3614,0.279440192
-South Yarra,SOUTH YARRA,1 motor vehicle,6920,0.535065337
-South Yarra,SOUTH YARRA,2 motor vehicles,1945,0.150390474
-South Yarra,SOUTH YARRA,3 motor vehicles,326,0.025206835
-South Yarra,SOUTH YARRA,4+ motor vehicles,132,0.010206449
-Southbank,SOUTHBANK,0 motor vehicles,4762,0.405587258
-Southbank,SOUTHBANK,1 motor vehicle,5930,0.505067711
-Southbank,SOUTHBANK,2 motor vehicles,933,0.079465122
-Southbank,SOUTHBANK,3 motor vehicles,79,0.006728558
-Southbank,SOUTHBANK,4+ motor vehicles,32,0.002725492
-West Melbourne,WEST MELBOURNE,0 motor vehicles,1383,0.364043169
-West Melbourne,WEST MELBOURNE,1 motor vehicle,1943,0.511450382
-West Melbourne,WEST MELBOURNE,2 motor vehicles,401,0.105554093
-West Melbourne,WEST MELBOURNE,3 motor vehicles,55,0.014477494
-West Melbourne,WEST MELBOURNE,4+ motor vehicles,19,0.005001316
+Carlton,CARLTON,0 motor vehicles,3294,49%
+Carlton,CARLTON,1 motor vehicle,2714,40%
+Carlton,CARLTON,2 motor vehicles,620,9%
+Carlton,CARLTON,3 motor vehicles,103,2%
+Carlton,CARLTON,4+ motor vehicles,46,1%
+Docklands,DOCKLANDS,0 motor vehicles,3044,41%
+Docklands,DOCKLANDS,1 motor vehicle,3514,47%
+Docklands,DOCKLANDS,2 motor vehicles,765,10%
+Docklands,DOCKLANDS,3 motor vehicles,96,1%
+Docklands,DOCKLANDS,4+ motor vehicles,36,0%
+East Melbourne,EAST MELBOURNE,0 motor vehicles,452,19%
+East Melbourne,EAST MELBOURNE,1 motor vehicle,1263,53%
+East Melbourne,EAST MELBOURNE,2 motor vehicles,539,23%
+East Melbourne,EAST MELBOURNE,3 motor vehicles,71,3%
+East Melbourne,EAST MELBOURNE,4+ motor vehicles,44,2%
+Kensington,KENSINGTON,0 motor vehicles,791,17%
+Kensington,KENSINGTON,1 motor vehicle,2549,55%
+Kensington,KENSINGTON,2 motor vehicles,1111,24%
+Kensington,KENSINGTON,3 motor vehicles,176,4%
+Kensington,KENSINGTON,4+ motor vehicles,46,1%
+Melbourne,MELBOURNE,0 motor vehicles,16453,61%
+Melbourne,MELBOURNE,1 motor vehicle,8909,33%
+Melbourne,MELBOURNE,2 motor vehicles,1360,5%
+Melbourne,MELBOURNE,3 motor vehicles,147,1%
+Melbourne,MELBOURNE,4+ motor vehicles,77,0%
+North Melbourne,NORTH MELBOURNE,0 motor vehicles,2095,33%
+North Melbourne,NORTH MELBOURNE,1 motor vehicle,3249,51%
+North Melbourne,NORTH MELBOURNE,2 motor vehicles,879,14%
+North Melbourne,NORTH MELBOURNE,3 motor vehicles,126,2%
+North Melbourne,NORTH MELBOURNE,4+ motor vehicles,43,1%
+Parkville,PARKVILLE,0 motor vehicles,381,18%
+Parkville,PARKVILLE,1 motor vehicle,1203,57%
+Parkville,PARKVILLE,2 motor vehicles,431,20%
+Parkville,PARKVILLE,3 motor vehicles,80,4%
+Parkville,PARKVILLE,4+ motor vehicles,32,2%
+Port Melbourne,PORT MELBOURNE,0 motor vehicles,930,12%
+Port Melbourne,PORT MELBOURNE,1 motor vehicle,4152,54%
+Port Melbourne,PORT MELBOURNE,2 motor vehicles,2177,28%
+Port Melbourne,PORT MELBOURNE,3 motor vehicles,353,5%
+Port Melbourne,PORT MELBOURNE,4+ motor vehicles,111,1%
+South Yarra,SOUTH YARRA,0 motor vehicles,3614,28%
+South Yarra,SOUTH YARRA,1 motor vehicle,6920,54%
+South Yarra,SOUTH YARRA,2 motor vehicles,1945,15%
+South Yarra,SOUTH YARRA,3 motor vehicles,326,3%
+South Yarra,SOUTH YARRA,4+ motor vehicles,132,1%
+Southbank,SOUTHBANK,0 motor vehicles,4762,41%
+Southbank,SOUTHBANK,1 motor vehicle,5930,51%
+Southbank,SOUTHBANK,2 motor vehicles,933,8%
+Southbank,SOUTHBANK,3 motor vehicles,79,1%
+Southbank,SOUTHBANK,4+ motor vehicles,32,0%
+West Melbourne,WEST MELBOURNE,0 motor vehicles,1383,36%
+West Melbourne,WEST MELBOURNE,1 motor vehicle,1943,51%
+West Melbourne,WEST MELBOURNE,2 motor vehicles,401,11%
+West Melbourne,WEST MELBOURNE,3 motor vehicles,55,1%
+West Melbourne,WEST MELBOURNE,4+ motor vehicles,19,1%
