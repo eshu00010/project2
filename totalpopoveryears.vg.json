@@ -69,7 +69,7 @@
           "color": {
             "field": "Value",
             "type": "quantitative",
-            "scale": {"domain": [0, 5000, 10000, 15000, 20000, 25000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000], "scheme": "reds"},
+            "scale": {"domain": [0, 5000, 10000, 15000, 20000, 25000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000], "scheme": "tealblues"},
             "legend": {"format": ".2s"}
           },
           "tooltip": [
@@ -85,5 +85,9 @@
         }
       }
     ],
-    "config": {"style": {"cell": {"stroke": "white"}}}
+    "config": {
+      "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":500}}, 
+      "legend": {"labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 600},
+      "axis": {"labelFont": "Barlow", "labelFontWeight": 500},
+      "title": {"font": "Barlow", "fontWeight": 700}}
   }

@@ -1,6 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
+    "title": {
+        "text": "City of Melbourne map boundaries",
+    "frame": "group"
+    },
+    "width": 500,
+    "height": 400,
     "projection": {
       "type": "equirectangular"
     },
@@ -26,7 +31,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/medianchars.csv"
+          "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/totalpopyears.csv"
         },
         "transform": [
           {
@@ -48,26 +53,20 @@
         "encoding": {
           "shape": {"field": "geo", "type": "geojson"},
           "color": {
-            "field": "Median age",
-            "type": "quantitative",
-            "scale": {"scheme": "tealblues", "domain": [25, 30, 35, 40, 45]},
-            "legend": {"format": ".2s", "orient": "bottom"},
-            "title": "Age"
+            "field": "Geography",
+            "type": "nominal",
+            "scale": {"domain": ["Carlton", "Docklands", "East Melbourne", "Kensington", "Melbourne", "North Melbourne", "Parkville", "Port Melbourne", "Southbank", "South Wharf", "South Yarra", "West Melbourne"], 
+            "range": ["#00CCC2","#008BF8","#23967F","#AEC5EB","#344e41","#50808E","#67CBC4","#0A2463","#6FC3A1","#C2C2C2","#72AC8E","#205CE9"]}
           },
           "tooltip": [
-            {"field": "Geography", "type": "nominal", "title": "Suburb"},
-            {
-              "field": "Median age",
-              "type": "quantitative",
-              "format": ","
-            }
+            {"field": "Geography", "type": "nominal", "title": "Suburb"}
           ]
         }
       }
     ],
     "config": {
-      "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":100}}, 
-      "legend": {"labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 600},
-      "axis": {"labelFont": "Barlow", "labelFontWeight": 100},
-      "title": {"font": "Barlow", "fontWeight": 400}}
+      "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":500}}, 
+      "legend": {"disable": true},
+      "axis": {"labelFont": "Barlow", "labelFontWeight": 500},
+      "title": {"font": "Barlow", "fontWeight": 700}}
   }

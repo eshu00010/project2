@@ -4,17 +4,26 @@
     "width": "container",
     "data": {"url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/carslong.csv"},
     "mark": "bar",
+    "params": [{
+        "name": "highlight",
+        "select": {"type": "point", "fields": ["Vehicles per dwelling"]},
+        "bind": "legend"
+    }],
     "encoding": {
       "x": {"aggregate": "sum", "field": "Value", "title": "Share of number of vehicles per dwelling", "stack": "normalize"},
       "y": {"field": "Geography", "title": null},
       "color": {"field": "Vehicles per dwelling", 
-                "legend": {"orient": "bottom"}, "scale": {"range": ["#344e41", "#48704f", "#649263", "#a3b18a", "#d6f8d6"]}},
+                "legend": {"orient": "bottom"}, "scale": {"range": ["#429C93", "#A0D5E6", "#3199BB", "#519D53", "#2A6274"]}},
       "tooltip": [
         {"field": "Geography", "type": "ordinal", "title": "Suburb"},
         {"field": "Vehicles per dwelling", "type": "nominal"},
         {"field": "Share", "type": "nominal", "title": "Share of total"},
         {"field": "Value", "type": "quantitative", "title": "Number", "format": ","}
-      ]
+      ],
+      "opacity": {
+        "condition": {"param": "highlight", "value": 1},
+        "value": 0.2
+      }
     },
     
     "config": {

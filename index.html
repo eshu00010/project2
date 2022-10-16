@@ -14,9 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
@@ -31,21 +31,18 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <img src="https://www.booksandpublishing.com.au/wp-content/uploads/2017/09/com-secondary-a-solid-400x111.jpg">
-      </div>
+      <img src="https://raw.githubusercontent.com/eshu00010/project2/main/images/City-of-Melbourne-logo-400by120px.png">
+        </div>
       <div class="pure-u-1-2">
         <h1>Demographics</h1>
-        <p>Explore demographic data from the 2021 Census on the City of Melbourne Council. Emphasis is placed on population, rent, income and car ownership.</p>
+        <p>Explore actual and forecasted demographic data from the 2021 Census and SGS Economics on the City of Melbourne Council. Emphasis is placed on population, rent, income and car ownership.</p>
       </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-1-2">
-          <p>Include map of boundaries</p>
-        </div>
-        <div class="pure-u-1-2">
+        <div class="pure-u-1-3">
           <p>The City of Melbourne Council is composed of the following suburbs: 
               <ul>
                   <li>Carlton</li>
@@ -63,6 +60,9 @@
               </ul> 
           </p>
           <p>South Wharf is excluded from the following data visualisations due to low population numbers.</p>
+        </div>
+        <div class="pure-u-2-2">
+          <div id="vis2" class="vis-container"></div>
         </div>
       </div>
       <!-- end pure grid group -->
@@ -96,113 +96,171 @@
     <div class="pure-g">
         <div class="pure-u-1-3">
         <div class="description description-left">
-            <p>Median age</p>
+            <p style="font-weight:600">Median age</p>
         </div>
-        <div id="vis6" class="vis-container"></div>
+        <div id="vis5" class="vis-container"></div>
         <div class="description description-left">
-            <p>East Melbourne and Port Melbourne have the highest median age of 42 years of age. </p>
-            <p>Parkville and Carlton have the lowest median ages of 26 and 27, respectively.</p>
+            <p><span class='eastmelb_text'>East Melbourne</span> and <span class='portmelb_text'>Port Melbourne</span> have the highest median age of 42 years of age. </p>
+            <p><span class='parkville_text'>Parkville</span> and <span class='carlton_text'>Carlton</span> have the lowest median ages of 26 and 27, respectively.</p>
         </div>
         </div>
         <div class="pure-u-1-3">
             <div class="description description-left">
-            <p>Median weekly rent ($)</p>
+            <p style="font-weight:600">Median weekly rent ($)</p>
+            </div>
+            <div id="vis3" class="vis-container"></div>
+            <div class="description description-left">
+                <p><span class='portmelb_text'>Port Melbourne</span> has the highest median rent of $540 per week.</p>
+                <p><span class='carlton_text'>Carlton</span> has the lowest median rent of $365 per week.</p>
+            </div>
+        </div>
+        <div class="pure-u-1-3">
+            <div class="description description-left">
+            <p style="font-weight:600">Median personal weekly income ($)</p>
             </div>
             <div id="vis4" class="vis-container"></div>
             <div class="description description-left">
-                <p>Port Melbourne has the highest median rent of $540 per week.</p>
-                <p>Carlton has the lowest median rent of $365 per week.</p>
-            </div>
-        </div>
-        <div class="pure-u-1-3">
-            <div class="description description-left">
-            <p>Median personal weekly income ($)</p>
-            </div>
-            <div id="vis5" class="vis-container"></div>
-            <div class="description description-left">
-                <p>East Melbourne has the highest median personal income of $1,532 per week.</p>
-                <p>Parkville has the lowest median personal income of $586 per week.</p>
+                <p><span class='eastmelb_text'>East Melbourne</span> has the highest median personal income of $1,532 per week.</p>
+                <p><span class='parkville_text'>Parkville</span> has the lowest median personal income of $586 per week.</p>
             </div>
         </div>
     <!-- end pure grid group -->
 
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description description-left">
+          <h2>Car ownership</h2>
+        </div>
+      </div>
 
    <!-- pure grid group -->
    <div class="pure-g">
     <div class="pure-u-1-3">
       <div class="description description-left">
-        <h2>Car ownership</h2>
-        <p>{Insert text}</p>
+        <p><span class='melb_text'>Melbourne</span> had the highest share of no vehicles and one vehicle per dwelling at 61% and 33%, respectively. 
+          <span class='portmelb_text'>Port Melbourne</span> had the lowest share of no vehicles per dwelling at 12%, but had the highest share of 2+ vehicles per dwelling. 
+          These findings can be attributed to the higher density residential buildings in <span class='melb_text'>Melbourne</span> in comparison to <span class='portmelb_text'>Port Melbourne</span>. 
+        As seen above, <span class='portmelb_text'>Port Melbourne</span> has a higher median age, weekly rent and personal income than <span class='melb_text'>Melbourne</span>, which could influence a person's willingness to use their discretionary income for purchasing vehicles. </p>
       </div>
     </div>
     <div class="pure-u-2-3">
-        <div id="vis7" class="vis-container"></div>
+        <div id="vis6" class="vis-container"></div>
     </div>
     <!-- end pure grid group -->
     
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description description-left">
+          <p> </p>
+          <h2>Population breakdown</h2>
+        </div>
+      </div>
+
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <h2>Population breakdown</h2>
-            <p>{Insert text}</p>
+            <p style="font-weight:600">City of Melbourne</p>
+            <p>The vast majority of City of Melbourne residents are in the 25-34 year old age group, 
+              with the 20-24 and 35-44 year old age groups being the next two most populous age groups.</p>
+              <p>Let's take a look at the population breakdowns for <span class='portmelb_text'>Port Melbourne</span> and <span class='parkville_text'>Parkville</span>, the suburbs with the highest and lowest median ages, respectively. </p>
           </div>
           </div>
-        <div class="pure-u-2-3">
-            <div id="vis8" class="vis-container"></div>
+        <div class="pure-u-1-12">
+          <p> </p>
+        </div>
+        <div class="pure-u-7-12">
+            <div id="vis7" class="vis-container"></div>
         </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-1-2">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <p style="font-weight:600">Parkville</p>
+          <p><span class='parkville_text'>Parkville's</span> population heavily skews towards the 15-34 year old age bracket. This is reflected by its median age of 26. </p>
+            <p>The relatively low share of people in the other age brackets indicate that there may not be many families living in <span class='parkville_text'>Parkville</span>.</p>
+        </div>
+        </div>
+      <div class="pure-u-1-12">
+        <p> </p>
+      </div>
+      <div class="pure-u-7-12">
+          <div id="vis8" class="vis-container"></div>
+      </div>
+    </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <p style="font-weight:600">Port Melbourne</p>
+          <p>In contrast to <span class='parkville_text'>Parkville</span>, <span class='portmelb_text'>Port Melbourne</span> has less people in the 15-24 year old age bracket, relative to other age brackets. This is reflected by its median age of 42.</p>
+          <p>This indicates that there may be more families living in <span class='portmelb_text'>Port Melbourne</span> than in <span class='parkville_text'>Parkville</span>.</p>
+        </div>
+        </div>
+      <div class="pure-u-1-12">
+        <p> </p>
+      </div>
+      <div class="pure-u-7-12">
           <div id="vis9" class="vis-container"></div>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="vis10" class="vis-container"></div>
-        </div>
+      </div>
+    </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <div class="description description-left">
+        <p> </p>
+        <h2>Families in the City of Melbourne</h2>
+      </div>
     </div>
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-2">
-            <div id="vis11" class="vis-container"></div>
+  <!-- pure grid group -->
+  <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <p style="font-weight:600">Parkville</p>
+          <p>The vast majority of City of Melbourne residents are in the 25-34 year old age group, 
+            with the 20-24 and 35-44 year old age groups being the next two most populous age groups.</p>
+            <p>Let's take a look at the population breakdowns for <span class='portmelb_text'>Port Melbourne</span> and <span class='parkville_text'>Parkville</span>, the suburbs with the highest and lowest median ages, respectively. </p>
         </div>
-        <div class="pure-u-1-2">
-            <div id="vis12" class="vis-container"></div>
         </div>
+      <div class="pure-u-1-12">
+        <p> </p>
+      </div>
+      <div class="pure-u-7-12">
+          <div id="vis10" class="vis-container"></div>
+      </div>
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <div class="pure-g">
+    <div class="pure-u-1-3">
+      <div class="description description-left">
+        <p style="font-weight:600">Port Melbourne</p>
+        <p>The vast majority of City of Melbourne residents are in the 25-34 year old age group, 
+          with the 20-24 and 35-44 year old age groups being the next two most populous age groups.</p>
+          <p>Let's take a look at the population breakdowns for <span class='portmelb_text'>Port Melbourne</span> and <span class='parkville_text'>Parkville</span>, the suburbs with the highest and lowest median ages, respectively. </p>
+      </div>
+      </div>
+    <div class="pure-u-1-12">
+      <p> </p>
     </div>
+    <div class="pure-u-7-12">
+        <div id="vis11" class="vis-container"></div>
+    </div>
+</div>
+<!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-2">
-            <div id="vis13" class="vis-container"></div>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="vis14" class="vis-container"></div>
-            </div>
-            </div>           
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-2">
-            <div id="vis15" class="vis-container"></div>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="vis16" class="vis-container"></div>
-            </div>
-            </div>  
-   
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-2">
-            <div id="vis17" class="vis-container"></div>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="vis18" class="vis-container"></div>
-            </div>
-            </div> 
 
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -215,24 +273,16 @@
 
   <script type="text/javascript">
     var specVis1 = "./totalpopoveryears.vg.json";
-    var specVis2 = "./popforecasts.vg.json";
-    var specVis3 = "./popforecasts.vg.json";
-    var specVis4 = "./medianrent.vg.json";
-    var specVis5 = "./medianpersonalincome.vg.json";
-    var specVis6 = "./medianage.vg.json";
-    var specVis7 = "./carownership.vg.json";
-    var specVis8 = "./populationpyramid_citymelb.vg.json";
-    var specVis9 = "./populationpyramid_carlton.vg.json";
-    var specVis10 = "./populationpyramid_docklands.vg.json";
-    var specVis11 = "./populationpyramid_eastmelb.vg.json";
-    var specVis12 = "./populationpyramid_kensington.vg.json";
-    var specVis13 = "./populationpyramid_melbourne.vg.json";
-    var specVis14 = "./populationpyramid_northmelb.vg.json";
-    var specVis15 = "./populationpyramid_parkville.vg.json";
-    var specVis16 = "./populationpyramid_portmelb.vg.json";
-    var specVis17 = "./populationpyramid_southbank.vg.json";
-    var specVis18 = "./populationpyramid_southyarra.vg.json";
-    var specVis19 = "./populationpyramid_westmelb.vg.json";
+    var specVis2 = "./boundariesmap.vg.json";
+    var specVis3 = "./medianrent.vg.json";
+    var specVis4 = "./medianpersonalincome.vg.json";
+    var specVis5 = "./medianage.vg.json";
+    var specVis6 = "./carownership.vg.json";
+    var specVis7 = "./populationpyramid_citymelb.vg.json";
+    var specVis8 = "./populationpyramid_parkville.vg.json";
+    var specVis9 = "./populationpyramid_portmelb.vg.json";
+    var specVis10 = "./donutfam_parkville.vg.json";
+    var specVis11 = "./donutfam_portmelb.vg.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
@@ -276,17 +326,6 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis12', specVis12, { "actions": false }).then(function (result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#vis13', specVis13, { "actions": false }).then(function (result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#vis14', specVis14, { "actions": false }).then(function (result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
   </script>
 </body>
 

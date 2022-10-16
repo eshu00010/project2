@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "City of Melbourne", "anchor": "middle"},
     "description": "A population pyramid for the City of Melbourne",
     "data": { "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/popbyagegenderlong.csv"},
     "transform": [
@@ -29,13 +28,13 @@
         },
         "color": {
           "field": "Gender",
-          "scale": {"range": ["#675193", "#ca8861"]},
+          "scale": {"range": ["#50808e", "#a3b18a"]},
           "legend": null
         },
         "tooltip": [
             {"field": "Gender", "type": "nominal"},
             {"field": "Age", "type": "nominal", "title": "Age group"},
-            {"field": "Value", "type": "quantitative", "title": "Population"}
+            {"field": "Value", "type": "quantitative", "title": "Population", "format": ","}
         ]
       }
     }, {
@@ -43,7 +42,8 @@
       "view": {"stroke": null},
       "mark": {
         "type": "text",
-        "align": "center"
+        "align": "center",
+        "font": "Barlow"
       },
       "encoding": {
         "y": {"field": "Age", "type": "nominal", "axis": null, "sort": ["0-4 years", "5-14 years", "15-19 years", "20-24 years", 
@@ -76,12 +76,15 @@
         "tooltip": [
             {"field": "Gender", "type": "nominal"},
             {"field": "Age", "type": "nominal", "title": "Age group"},
-            {"field": "Value", "type": "quantitative", "title": "Population"}
+            {"field": "Value", "type": "quantitative", "title": "Population", "format": ","}
         ]
       }
     }],
     "config": {
       "view": {"stroke": null},
-      "axis": {"grid": false}
+      "axis": {"grid": false, "labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 100},
+      "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":500}}, 
+      "legend": {"labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 600},
+      "title": {"font": "Barlow", "fontWeight": 700}
     }
   }

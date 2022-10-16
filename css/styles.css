@@ -1,9 +1,9 @@
 body *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 h1 {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 body {
@@ -25,6 +25,7 @@ body {
 .description h2,
 h1 {
     margin-top: 0px;
+    font-weight: 600;
 }
 
 .description-right {
@@ -41,4 +42,60 @@ h1 {
 
 .small-font {
     font-size: 14px;
+    font-weight: 700;
+}
+
+.carlton_text {
+    color: #00CCC2;
+    font-weight: 600
+}
+
+.docklands_text {
+    color: #008bf8;
+    font-weight: 600
+}
+
+.eastmelb_text {
+    color: #23967f;
+    font-weight: 600
+}
+
+.kensington_text {
+    color: #aec5eb;
+    font-weight: 600
+}
+
+.melb_text {
+    color: #344e41;
+    font-weight: 600
+}
+
+.northmelb_text {
+    color: #50808e;
+    font-weight: 600
+}
+
+.parkville_text {
+    color: #67cbc4;
+    font-weight: 600
+}
+
+.portmelb_text {
+    color: #0a2463;
+    font-weight: 600
+}
+
+.southbank_text {
+    color: #6fc3a1;
+    font-weight: 600
+}
+
+.southyarra_text {
+    color: #72ac8e;
+    font-weight: 600
+}
+
+.westmelb_text {
+    color: #205ce9;
+    font-weight: 600
 }

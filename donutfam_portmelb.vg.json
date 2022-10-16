@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"Family": "Couples with no children", "Value": 2251, "Percentage": "60.46%"},
+        {"Family": "Couples with children under 15 years", "Value": 1171, "Percentage": "31.45%"},
+        {"Family": "Single parents with children under 15 years", "Value": 301, "Percentage": "8.08%"}
+      ]
+    },
+    "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Value", "type": "quantitative", "stack": "normalize"},
+      "color": {"field": "Family", "type": "nominal", 
+                "sort": ["Couples with no children", "Couples with children under 15 years", "Single parents with children under 15 years"],
+                "legend": null,
+                "scale": {"range": ["#48704f", "#649263", "#a3b18a"]}},
+      "tooltip": [
+        {"field": "Family", "type":"nominal", "title": "Type of family"},
+        {"field": "Percentage", "type": "nominal", "title": "Share"},
+        {"field": "Value", "type":"quantitative", "title":"Number", "format": ","}]
+    },
+    "config": {
+        "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":100}}, 
+        "legend": {"labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 600},
+        "axis": {"labelFont": "Barlow", "labelFontWeight": 400, "titleFontWeight": 100},
+        "title": {"font": "Barlow", "fontWeight": 700}
+    }
+  }
+  

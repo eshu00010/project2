@@ -50,19 +50,25 @@
           "color": {
             "field": "Median weekly rent ($)",
             "type": "quantitative",
-            "scale": {"scheme": "reds", "domainMax": 550},
-            "legend": {"format": ".2s", "orient": "bottom"}
+            "scale": {"scheme": "tealblues", "domain": [350, 400, 450, 500, 550]},
+            "legend": {"format": ".2s", "orient": "bottom"},
+            "title": "Weekly rent ($)"
           },
           "tooltip": [
             {"field": "Geography", "type": "nominal", "title": "Suburb"},
             {
               "field": "Median weekly rent ($)",
               "type": "quantitative",
-              "format": ","
+              "format": "," 
             }
           ]
         }
       }
     ],
-    "config": {"style": {"cell": {"stroke": "white"}}}
+    "config": {
+      "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":100}}, 
+      "legend": {"labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 600},
+      "axis": {"labelFont": "Barlow", "labelFontWeight": 100},
+      "title": {"font": "Barlow", "fontWeight": 400}
+  }
   }

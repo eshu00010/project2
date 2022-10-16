@@ -50,8 +50,9 @@
           "color": {
             "field": "Median personal weekly income ($)",
             "type": "quantitative",
-            "scale": {"scheme": "reds"},
-            "legend": {"format": ".2s", "orient": "bottom"}
+            "scale": {"scheme": "tealblues", "domainMin": 550, "domainMax": 1600},
+            "legend": {"format": ".2s", "orient": "bottom"},
+            "title": "Weekly income ($)"
           },
           "tooltip": [
             {"field": "Geography", "type": "nominal", "title": "Suburb"},
@@ -64,5 +65,9 @@
         }
       }
     ],
-    "config": {"style": {"cell": {"stroke": "white"}}}
+    "config": {
+      "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":100}}, 
+      "legend": {"labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 600},
+      "axis": {"labelFont": "Barlow", "labelFontWeight": 100},
+      "title": {"font": "Barlow", "fontWeight": 400}}
   }

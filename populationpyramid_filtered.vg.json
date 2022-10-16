@@ -1,15 +1,52 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "Carlton", "anchor": "middle"},
     "description": "A population pyramid for the City of Melbourne",
     "data": { "url": "https://raw.githubusercontent.com/eshu00010/project2/main/data/popbyagegenderlong.csv"},
-    "transform": [
-      {"filter": {"field": "Geography", "equal": "Parkville"}}
+    "params":[
+        {
+            "name": "suburb_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Carlton",
+                    "Docklands",
+                    "East Melbourne",
+                    "Kensington",
+                    "Melbourne",
+                    "North Melbourne",
+                    "Parkville",
+                    "Port Melbourne",
+                    "Southbank",
+                    "South Yarra",
+                    "West Melbourne"
+                ],
+                "labels": [
+                    "Carlton",
+                    "Docklands",
+                    "East Melbourne",
+                    "Kensington",
+                    "Melbourne",
+                    "North Melbourne",
+                    "Parkville",
+                    "Port Melbourne",
+                    "Southbank",
+                    "South Yarra",
+                    "West Melbourne"
+                ],
+                "name": "Suburb selection:   "
+            }
+        }
     ],
+    "transform": [
+        {"filter": "datum.Geography == suburb_selection"}
+      ],
     "spacing": 0,
     "hconcat": [{
       "transform": [{
         "filter": {"field": "Gender", "equal": "Female"}
       }],
+      "title": "Female",
       "mark": "bar",
       "encoding": {
         "y": {
@@ -24,17 +61,17 @@
           "title": "Population",
           "axis": {"format": "s"},
           "sort": "descending",
-          "scale": {"domainMax": 2000}
+          "scale": {"domainMax": 5000}
         },
         "color": {
           "field": "Gender",
-          "scale": {"range": ["#50808e", "#a3b18a"]},
+          "scale": {"range": ["#675193", "#ca8861"]},
           "legend": null
         },
         "tooltip": [
             {"field": "Gender", "type": "nominal"},
             {"field": "Age", "type": "nominal", "title": "Age group"},
-            {"field": "Value", "type": "quantitative", "title": "Population", "format": ","}
+            {"field": "Value", "type": "quantitative", "title": "Population"}
         ]
       }
     }, {
@@ -42,8 +79,7 @@
       "view": {"stroke": null},
       "mark": {
         "type": "text",
-        "align": "center",
-        "font": "Barlow"
+        "align": "center"
       },
       "encoding": {
         "y": {"field": "Age", "type": "nominal", "axis": null, "sort": ["0-4 years", "5-14 years", "15-19 years", "20-24 years", 
@@ -55,6 +91,7 @@
       "transform": [{
         "filter": {"field": "Gender", "equal": "Male"}
       }],
+      "title": "Male",
       "mark": "bar",
       "encoding": {
         "y": {
@@ -67,7 +104,7 @@
           "aggregate": "sum", "field": "Value",
           "title": "Population",
           "axis": {"format": "s"},
-          "scale": {"domainMax": 2000}
+          "scale": {"domainMax": 5000}
         },
         "color": {
           "field": "Gender",
@@ -76,15 +113,12 @@
         "tooltip": [
             {"field": "Gender", "type": "nominal"},
             {"field": "Age", "type": "nominal", "title": "Age group"},
-            {"field": "Value", "type": "quantitative", "title": "Population", "format": ","}
+            {"field": "Value", "type": "quantitative", "title": "Population"}
         ]
       }
     }],
     "config": {
       "view": {"stroke": null},
-      "axis": {"grid": false, "labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 100},
-      "style": {"cell": {"stroke": "white"}, "mark": {"font": "Barlow", "fontStyle": "Barlow", "fontWeight":500}}, 
-      "legend": {"labelFont": "Barlow", "labelFontWeight": 100, "titleFont": "Barlow", "titleFontWeight": 600},
-      "title": {"font": "Barlow", "fontWeight": 700}
+      "axis": {"grid": false}
     }
   }
